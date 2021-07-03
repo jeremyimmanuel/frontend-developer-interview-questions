@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#circle {
+    background-color: red;
+    border-radius:50%;
+    height: 250px;
+    width: 250px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#circle:hover {
+    transform: translateY(-100px)
+}

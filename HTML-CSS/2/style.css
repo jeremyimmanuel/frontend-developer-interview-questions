@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#progressbar {
+    margin-top: 24px;
+    background-color: cornflowerblue;
+    border-radius: 8px;
+    height: 50px;
+    width: 0;
+}

@@ -1,0 +1,16 @@
+.block {
+    height: 200px;
+    width: 200px;
+}
+
+#block1 {
+    background-color: rgb(255, 93, 93);
+}
+
+#block2 {
+    background-color: rgb(93, 255, 93);
+}
+
+#block3 {
+    background-color: rgb(88, 88, 255);
+}
