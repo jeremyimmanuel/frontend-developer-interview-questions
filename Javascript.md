@@ -1,19 +1,22 @@
 # Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Hoisting](#hoisting)
+  - [Give the output/error in the following cases](#give-the-outputerror-in-the-following-cases)
 - [Equality Testing](#equality-testing)
 - [this](#this)
+  - [Give the output/error in the following cases](#give-the-outputerror-in-the-following-cases-1)
 - [Event Loop](#event-loop)
-- [Closure](#closure)
-- [Scope](#scope)
-- [Datatypes](#datatypes)
-- [Implementation/Coding Questions](#implementation-or-coding-questions)
+  - [Give the output in the following cases](#give-the-output-in-the-following-cases)
+  - [Object](#object)
+- [Implementation or Coding Questions](#implementation-or-coding-questions)
 - [Design based open ended problems](#design-based-open-ended-problems)
 - [Theoretical Questions](#theoretical-questions)
 
-# Hoisting:
+# Hoisting
 
 ## Give the output/error in the following cases
+
 - ```javascript
   function a(){
     console.log(b) // output: ƒ b(){ console.log("hi") }
@@ -102,7 +105,7 @@
   }
   ```
 
-# Equality Testing:
+# Equality Testing
 
 - ```javascript
   var a = {key: 1};
@@ -110,6 +113,7 @@
   console.log(a == b); // false    
   console.log(a === b); // false   
   ```
+
 - ```javascript
   console.log(null == null); // true 
   console.log(null === null); // true 
@@ -122,7 +126,6 @@
 # this
 
 ## Give the output/error in the following cases
-
 
 - ```javascript
   const x = {
@@ -205,10 +208,10 @@
   // Hint: Fat arrow, Bind, Call
   ```
 
-
 # Event Loop
 
 ## Give the output in the following cases
+
 - ```javascript
   console.log("A")
   setTimeout(function(){ console.log("B") }, 1000)
@@ -240,6 +243,7 @@
 ## Write function definition for the following cases
 
 ### Infinite Argument Problem
+
 - Create a function sum which when called `sum(1,2,3....n)()` or `sum(1)(2)(3)...(n)()` should yield same result.
 
 - For a given n number of arguments, create a function sum which when called
@@ -247,9 +251,9 @@
   - sum(1)(2)(3)...(n)
   - sum(1,2,3)(4,5,...n)
   - sum(1,2)(3,4)(5)(6,7)..(n)
-  - sum(1,2,3...n-2)(n-1, n) 
+  - sum(1,2,3...n-2)(n-1, n)
   all should yield the same result.
-- Create a function such that `sentence("I")("am")("going")("out.")` should output I am going out. The last parameter will always contain full stop. 
+- Create a function such that `sentence("I")("am")("going")("out.")` should output I am going out. The last parameter will always contain full stop.
   - sentence("I")("am")("going")("out.")
   - sentence("I am")("going")("out.")
   - sentence("I am going")("out.")
@@ -265,6 +269,7 @@
       }, 1000)
   }
   ```
+
   What will be the output?
   What are the various ways so that proper value for `i` is printed? (Hint: let, iife)
 
@@ -281,6 +286,7 @@
     }
   }
   ```
+
   How can you fix the issue if any?
 
 # Datatypes
@@ -302,6 +308,7 @@ console.log(s) // google, strings are immutable
   `a.1, a."1", a[1], a["1"]`
   What is the output in each of the following for object a
 - Create a person object with firstname and lastname and printfullname. Print full name
+
   ```javascript
   const person = {
     firstName: "Sunil",
@@ -311,8 +318,8 @@ console.log(s) // google, strings are immutable
     }
   }
   ```
-  Suppose there is a `person2 = { firstName: "Sunil", lastName: "Chaudhary" }`. How can you call printFullName method (without modifying definition)
 
+  Suppose there is a `person2 = { firstName: "Sunil", lastName: "Chaudhary" }`. How can you call printFullName method (without modifying definition)
 
 # Implementation or Coding Questions
 
@@ -333,6 +340,7 @@ console.log(s) // google, strings are immutable
 - Write a function to do deep equality checks in objects
 
 - Suppose you have input like:
+
   ```javascript
   var skillsArray = [
     { skill: 'css', user: 'Bill' },
@@ -343,7 +351,9 @@ console.log(s) // google, strings are immutable
     { skill: 'html', user: 'Sue' }
   ];
   ```
+
   Convert it into result of the following form:
+
   ```javascript
   [
     { skill: 'javascript', user: [ 'Chad', 'Bill', 'Sue' ], count: 3 },
@@ -351,6 +361,7 @@ console.log(s) // google, strings are immutable
     { skill: 'html', user: [ 'Sue' ], count: 1 } 
   ]
   ```
+
   ```javascript
   // Solution
   function groupBySkill(endorsements) {
@@ -375,12 +386,14 @@ console.log(s) // google, strings are immutable
   ```
 
 - Write a function to reverse a string
+
   ```javascript
     str.split("").reverse().join("")
   ```
 
 - Given the following input and output arrays. Write function `zip` which will take the input arrays as arguments and give the output
-  ```javascript 
+
+  ```javascript
   // input arrays - arr1, arr2
   const arr1 = [{a : 1}, {b : 2}]
   const arr2 = [{c : 1}, {d : 4}]
@@ -391,6 +404,7 @@ console.log(s) // google, strings are immutable
   ```
 
 - Given array containing positive and negative numbers (both integers and decimals). Separate them in 4 groups: integers +ve, integers -ve, decimals +ve, decimals -ve and show their separate sums.
+
   ```javascript
   // e.g.
   arr = [1,5,7,8,0.8,0.7,0.6,0.5,-1,-2,-6,-8,-1.7,-2.5,-7.6];
@@ -401,6 +415,7 @@ console.log(s) // google, strings are immutable
     posNo: 21
   }
   ```
+
   [Solution in JSBin](https://jsbin.com/joyexazeki/1/edit?html,js,output)
 
 - Suppose there is a tunnel through which train can pass. You are standing inside the tunnel. Train enters from left side and exits from right side. Trains have bogeys numbered from 0 to 10. You can see only the bogeys which are inside the tunnel. Write a program mimicing this behaviour. [Solution in JSBin](https://jsbin.com/goyuludayi/edit?css,js,output)
@@ -409,17 +424,18 @@ console.log(s) // google, strings are immutable
 
 - How to block the main thread of javascript? [Hint](https://jsfiddle.net/sunil12738/sf6v5jxk/7/)
 
-- Create a memoizer function. It should take some function to return a new memoized function. For a given input, it should store the value and if the same input is encountered again, it should give the stored value.    
-  e.g.    
-    fib(n): function to calculate nth fibonacci    
-    memoize(fn): memoizer function    
+- Create a memoizer function. It should take some function to return a new memoized function. For a given input, it should store the value and if the same input is encountered again, it should give the stored value.
+  e.g.
+    fib(n): function to calculate nth fibonacci
+    memoize(fn): memoizer function
     memoizeFib = memoize(fib) : memoizeFib is a new function which won't calculate the fib(n) again if already calculated
 
 - Suppose there is a object `a = { b: {}, c: {} }`. How can you change reference of b without changing reference of c
 
-- Let string = “+++++*(e)abcdefff” where + means any single character, * means any number of characters, *(e) any 3 same characters only. Given a string where first half consists of combination of +, *, *(e) and second half consists of alphabets only. Write a validator.
+- Let string = “+++++*(e)abcdefff” where + means any single character,* means any number of characters, *(e) any 3 same characters only. Given a string where first half consists of combination of +,*, *(e) and second half consists of alphabets only. Write a validator.
 
 - Create a Person class/function in such a way that `new Person().setFirstName("Sunil").setLastName("Chaudhary").printFullName()` prints `Sunil Chaudhary` on screen
+
   ```javascript
   // Solution
   class Person {
@@ -443,43 +459,44 @@ console.log(s) // google, strings are immutable
 
 # Design based open ended problems
 
-- How to design google calendar month view? 
+- How to design google calendar month view?
 - How to design a crossword puzzle app? User should be able to view the crossword puzzle, fill in and check if he is correct or not
 - How to design candy crush game?
 - Design a priority queue in javascript where values with certain priorities can be pushed and popped. In case two values have the same priority, the one pushed earlier should be popped first. (Hint: Use 2D array)
 - Usually the output of 1 + function x() {alert(1);} is "1function x(){alert(1);}". Can you write a code such that the output should be "1start:function x() {alert(1);}:end". For that matter, it should work for any function by prepending 'start:' at the beginning of function and appending ':end' at the end of the function.
 - Given a array of paragraphs, how can you search if certain sentences are present inside those paragraphs. The array can be very big.
-- A system consists of some subscribers, events, and actions. A subscriber can subscribe to a certain events in a way that when event is trigerred, relevant action is performed 
-e.g.    
+- A system consists of some subscribers, events, and actions. A subscriber can subscribe to a certain events in a way that when event is trigerred, relevant action is performed
+e.g.
 
   - Subscriber can be S1, S2...Sn
   - Events can be E1, E2...En
   - Actions can be A1, A2..An
-        
+
   | Subscriber | Event | Action |
-  |------------|-------|--------|
-  | S1         | E1    | A1     | 
-  | S1         | E2    | A1     | 
-  | S2         | E1    | A2     | 
-  | S2         | E2    | A3     | 
-  | S3         | E1    | A4     | 
+  | ---------- | ----- | ------ |
+  | S1         | E1    | A1     |
+  | S1         | E2    | A1     |
+  | S2         | E1    | A2     |
+  | S2         | E2    | A3     |
+  | S3         | E1    | A4     |
   | S3         | E2    | A5     |
 
   Here, When E1 event happens, action A1 happens for S1, action A2 happens for S2 and action A4 happens for S3
   What will be the data-structure you will choose and the overall architecture.
 - Suppose there is a company which does some analytics work and returns data. The company (let's say X) gets a stream of numbers and it calculates average at that instant for all numbers received and returns the average. There could be other companies (let's say Y) which can ask for the average.
 
-  Data:   1  3  5  7  9    
+  Data:   1  3  5  7  9
   Avg:    1  2  3  4  5
 
   So, in the above example, the average are calculated by company X.
 
-  After first no, average is 1,    
-  After second no (i.e. 3), average is 2 ((3+1)/2) and so on    
+  After first no, average is 1,
+  After second no (i.e. 3), average is 2 ((3+1)/2) and so on
   At any point in time, companies are only concerned about average at that time (basically, if average is asked after data value 5, you only need to return 3)
   [Solution](https://codereview.stackexchange.com/questions/238416/finding-average-of-stream-of-numbers)
-- A page has some links. On clicking the link, you want some other page to load (can be in same website or other website) as well as make the API call. What are various ways to do it? 
+- A page has some links. On clicking the link, you want some other page to load (can be in same website or other website) as well as make the API call. What are various ways to do it?
 - Suppose there is a bank which has some money. You can call a function `withdraw` to withdraw money updating and returning the total money. There should be no global variables and value shouldn't be modified except by the function call it.
+
   ```javascript
   // one solution is using closures
   function withDrawMoney(total){
@@ -529,13 +546,3 @@ e.g.
 - What is the scope of hoisted variables?
 - Difference between shallow copy and deep copy of a object.
 - Give some examples of tree shaking algorithms and how they work.
-
-
-
-
-
-
-
-
-
-

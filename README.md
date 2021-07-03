@@ -34,11 +34,12 @@ Recently gave interviews at some companies for Frontend Developer role and given
 
 ## How to Contribute
 
-### Raising a PR 
+### Raising a PR
+
 If you want to add any new questions or add solution to existing questions please raise a PR for the same
 
 - Fork the repository and create a new branch
-- Do the changes, commit code and raise PR to master branch in main repo (PR with changes directly in master branch will be rejected)    
+- Do the changes, commit code and raise PR to master branch in main repo (PR with changes directly in master branch will be rejected)
   Read more about [creating PR from a forked repo to base repo](https://help.github.com/en/enterprise/2.16/user/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
 - Please make sure that code and content is formatted properly with proper language
 - Questions with working solutions are encouraged. Either add the solutions here or you can add a JSBin/JSfiddle also
@@ -46,4 +47,5 @@ If you want to add any new questions or add solution to existing questions pleas
 - PRs with similar questions which are already added are likely to be rejected.
 
 ### Creating an issue
-If you want to discuss anything or some changes you are unsure of, please [create an issue](https://help.github.com/en/enterprise/2.15/user/articles/creating-an-issue) for the same before raising the PR. 
+
+If you want to discuss anything or some changes you are unsure of, please [create an issue](https://help.github.com/en/enterprise/2.15/user/articles/creating-an-issue) for the same before raising the PR.
